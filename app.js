@@ -1,3 +1,25 @@
+// Target Button
+const quoteBtn = document.querySelector("#quoteBtn");
+
+// Target Quote Author
+const quoteAuthor = document.querySelector("#quoteAuthor");
+
+//  Target Quote Button
+const quote = document.querySelector("#quote");
+
+// Create event listener for our button with callback function
+quoteBtn.addEventListener("click", displayQuote);
+
+function displayQuote() {
+  let number = Math.floor(Math.random() * quotes.length);
+  // console.log(number);
+  // We select quote author/quote which is equal to our array
+  // Then we get random number/index
+  // From this random number/index we get a name/quote
+  quoteAuthor.innerHTML = quotes[number].name;
+  quote.innerHTML = quotes[number].quote;
+}
+
 const quotes = [
   {
     name: "Marcus Aurelius",
